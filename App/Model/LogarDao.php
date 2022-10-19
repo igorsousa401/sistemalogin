@@ -11,8 +11,7 @@ class LogarDao {
 
     public function RealizarLogin(Logar $l) {
 
-
-        $sql = "SELECT * FROM usuarios WHERE email ='$l->email' AND senha = '$l->senha'";
+        $sql = "SELECT * FROM usuarios WHERE  email ='$l->email' AND senha = '$l->senha'";
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->execute();
 
@@ -28,6 +27,10 @@ class LogarDao {
                 echo "<li>$mensagem</li>";
             }
             header('Location: ../../login.php');
+            $this->mensagens[] = "Usuário/Senha Inválido!";
+            foreach($this->mensagens as $mensagem) {
+                echo $mensagem;
+            }
         }
     }
 }

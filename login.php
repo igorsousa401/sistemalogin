@@ -42,11 +42,11 @@ require_once 'vendor/autoload.php';
     <form action="App/Model/Logar.php" method="post">
         <div>
             <label for="email">E-mail</label>
-            <input type="email" name="email_login" id="email_login">
+            <input type="text" name="email_login" id="email_login">
 
             <label for="senha">Senha</label>
             <input type="password" name="senha_login" id="senha_login">
 
-            <button type="submit" name="btn-logar" id="btn-logar">Cadastrar</button>
+            <button type="submit" name="btn-logar" id="btn-logar">Entrar</button>
             
         </div>

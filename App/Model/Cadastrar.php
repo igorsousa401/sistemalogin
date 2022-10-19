@@ -1,11 +1,10 @@
 <?php
-
 namespace App\Model;
 
 require 'CadastrarDao.php';
 
 class Cadastrar{
-    public $nome, $email, $senha;
+    public $nome, $email, $senha, $mensagens;
 
     public function getNome() {
         return $this->nome;
@@ -40,6 +39,9 @@ if(isset($_POST['btn-cadastrar'])) {
     $cadastrar->setSenha($_POST['senha']);
     $cadastrarDao = new CadastrarDao();
     $cadastrarDao->Create($cadastrar);
+    header('Location: ../../login.php');
+} else{
+
 }
 
 ?>
