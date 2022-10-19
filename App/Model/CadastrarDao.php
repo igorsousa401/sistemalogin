@@ -23,7 +23,9 @@ class CadastrarDao{
     public function Update(){
         
     }
-    public function Delete(){
-        
+    public function Delete($id){
+        $sql = "DELETE FROM usuarios WHERE id = '$id'";
+        $stmt = Conexao::getConn()->prepare($sql);
+        $stmt->execute();
     }
 }

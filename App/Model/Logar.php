@@ -26,7 +26,7 @@ if(isset($_POST['btn-logar'])) {
     session_start();
     $logar = new Logar();
     $logar->setEmail($_POST['email_login']);
-    $logar->setSenha($_POST['senha_login']);
+    $logar->setSenha(md5($_POST['senha_login']));
     $logarDao = new LogarDao();
     $logarDao->RealizarLogin($logar);
     $_SESSION['email'] = $logar->email;

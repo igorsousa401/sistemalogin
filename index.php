@@ -1,5 +1,11 @@
 <?php
+
+use App\Model\CadastrarDao;
+
 require_once 'vendor/autoload.php';
+
+$deletar = new CadastrarDao();
+$deletar->Delete(5);
 ?>
 
 <!DOCTYPE html>

@@ -11,7 +11,7 @@ class LogarDao {
 
     public function RealizarLogin(Logar $l) {
 
-        $sql = "SELECT * FROM usuarios WHERE  email ='$l->email' AND senha = '$l->senha'";
+        $sql = "SELECT * FROM usuarios WHERE 1 email ='$l->email' AND senha = '$l->senha'";
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->execute();
 

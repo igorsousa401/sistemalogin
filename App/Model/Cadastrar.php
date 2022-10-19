@@ -27,7 +27,7 @@ class Cadastrar{
     }
 
     public function setSenha($s){
-        $senhaCriptografada = password_hash($s, PASSWORD_DEFAULT);
+        $senhaCriptografada = md5($s);
         $this->senha = $senhaCriptografada;
     }
 }
